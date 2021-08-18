@@ -161,7 +161,7 @@
   ```javascript
   const path = require('path')
   const merge = require('webpack-merge')
-  const common = require('./webpack.common.js')
+  const common = require('./webpack.common')
   module.exports = merge(common, {
     devtool: 'inline-source-map',
     mode: 'none',
@@ -182,7 +182,7 @@
 
   ```javascript
   const merge = require('webpack-merge')
-  const common = require('./webpack.common.js')
+  const common = require('./webpack.common')
   module.exports = merge(common, {
     'mode':'production',
     devtool: 'source-map',
@@ -218,7 +218,7 @@
     "author": "proudcat",
     "license": "MIT",
     "scripts": {
-      "start": "webpack-dev-server --open 'google chrome' --config webpack.dev.js"
+      "start": "webpack-dev-server --open 'google chrome' --config webpack.dev.cjs"
     },
     "devDependencies": {
       "webpack": "^4.41.5",
@@ -256,7 +256,7 @@
     "description": "make pixi.js game with webpack",
     "main": "src/js/main.js",
     "scripts": {
-      "start": "webpack-dev-server --open 'google chrome' --config webpack.dev.js",
+      "start": "webpack-dev-server --open 'google chrome' --config webpack.dev.cjs",
       "clean": "rimraf dist",
       "prebuild": "npm run clean",
       "build": "webpack --config webpack.prod.js"

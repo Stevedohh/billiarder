@@ -1,0 +1,25 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "experimentalObjectRestSpread": true,
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "require-jsdoc": 0,
+    "object-curly-spacing": ["error", "always"],
+    "indent": ["error", "tab"],
+    "no-tabs": "off",
+    "max-len": "off",
+    "guard-for-in": "off"
+  }
+}
